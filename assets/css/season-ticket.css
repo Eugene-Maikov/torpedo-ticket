@@ -1,0 +1,643 @@
+/* ============= (component:intro) ============ */
+.intro {
+	height: 842px;
+	background-image: url('../../assets/img/season-ticket/intro.jpg');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+}
+
+.intro:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 620px;
+	background: linear-gradient(0deg, #041027 0%, rgba(4, 16, 39, 0.99) 6.67%, rgba(4, 16, 39, 0.96) 13.33%, rgba(4, 16, 39, 0.92) 20.00%, rgba(4, 16, 39, 0.85) 26.67%, rgba(4, 16, 39, 0.77) 33.33%, rgba(4, 16, 39, 0.67) 40.00%, rgba(4, 16, 39, 0.56) 46.67%, rgba(4, 16, 39, 0.44) 53.33%, rgba(4, 16, 39, 0.33) 60.00%, rgba(4, 16, 39, 0.23) 66.67%, rgba(4, 16, 39, 0.15) 73.33%, rgba(4, 16, 39, 0.08) 80.00%, rgba(4, 16, 39, 0.04) 86.67%, rgba(4, 16, 39, 0.01) 93.33%, rgba(4, 16, 39, 0.00) 100%);
+}
+
+.intro__inner {
+	position: relative;
+}
+
+.intro__content {
+	position: absolute;
+	left: 0;
+	bottom: calc(-842px + 150px);
+	z-index: 1;
+}
+
+.intro__title {
+	color: #F4F6FA;
+	font-size: 78px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 100%; /* 78px */
+	letter-spacing: -0.78px;
+	text-transform: uppercase;
+	margin-bottom: 40px;
+}
+
+.intro__title span {
+	white-space: nowrap;
+}
+
+.intro .btn {
+	position: relative;
+	padding: 15px 20px;
+	font-size: 20px;
+	width: 239px;
+	height: 60px;
+	justify-content: flex-start;
+}
+
+.intro .btn:after {
+	content: '';
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='6' height='10' viewBox='0 0 6 10' fill='none'%3e%3cpath d='M6 5L0 0V10L6 5Z' fill='%23F4F6FA'/%3e%3c/svg%3e");
+	width: 6px;
+	height: 10px;
+	position: absolute;
+	top: 50%;
+	right: 20px;
+	transform: translateY(-50%);
+	margin-left: 39px;
+}
+
+/* ============= End (component:intro) ============ */
+/* ============= (component:benefits) ============ */
+.benefits {
+	background: #F4F6FA;
+	padding: 117px 0 160px 0;
+}
+
+.benefits__title {
+	color: #0C1931;
+	font-size: 94px;
+	font-weight: 500;
+	line-height: normal;
+	letter-spacing: -2.82px;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+
+.benefits__description {
+	width: 1021px;
+}
+
+.benefits__description p {
+	color: #00205B;
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 170%; /* 34px */
+	letter-spacing: 0.6px;
+	margin-bottom: 68px;
+}
+
+.benefits__list {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 42px 16px;
+}
+
+.benefits__item {
+	display: flex;
+	background: #EBEEF3;
+}
+
+.benefits__icon {
+	min-width: 125px;
+	min-height: 125px;
+	max-width: 125px;
+	max-height: 100%;
+	background: #00205B;
+	padding: 25px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.benefits__icon img {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.benefits__text {
+	color: #00205B;
+	font-size: 21px;
+	font-weight: 700;
+	line-height: 140%; /* 29.4px */
+	padding: 10px 25px;
+	display: flex;
+	align-items: center;
+}
+
+/* ============= End (component:benefits) ============ */
+/* ============= (component:price-table) ============ */
+.price-table {
+	padding-bottom: 147px;
+	background: #F4F6FA;
+}
+
+.price-table__title {
+	color: #0C1931;
+	font-size: 94px;
+	font-weight: 500;
+	line-height: normal;
+	letter-spacing: -2.82px;
+	text-transform: uppercase;
+	margin-bottom: 54px;
+}
+
+.price-table__title span {
+	white-space: nowrap;
+}
+
+.price-table .tab-wrapper {
+	display: flex;
+	justify-content: space-between;
+}
+
+.price-table .tab {
+	cursor: pointer;
+	padding: 21px 10px;
+	background: #EBEEF3;
+	box-shadow: -1px 4px 16px 0px rgba(0, 0, 0, 0.10) inset;
+	width: 50%;
+	height: 84px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #00205B;
+	font-family: Halvar Engschrift;
+	font-size: 36px;
+	font-weight: 400;
+	line-height: normal;
+	letter-spacing: 1.08px;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.price-table .tab.active {
+	background: #00205B;
+	color: #F4F6FA;
+}
+
+.price-table .tab-content .content-item {
+	display: none;
+}
+
+.price-table .tab-content .active {
+	display: block;
+}
+
+.price-table .tab-content {
+	background-image: url('../../assets/img/season-ticket/price-table-bg.jpg');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.price-table .content__list {
+	padding: 50px 0 50px 98px;
+	max-width: 740px;
+}
+
+.price-table .content__head {
+	display: flex;
+	justify-content: space-between;
+	color: #EBEEF3;
+	font-family: Manrope;
+	font-size: 30px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 170%; /* 51px */
+	letter-spacing: 0.9px;
+	text-transform: uppercase;
+	padding-bottom: 21px;
+	border-bottom: 1px solid #F4F6FA;
+}
+
+.price-table .content__element {
+	display: flex;
+	justify-content: space-between;
+	color: #EBEEF3;
+	font-family: Manrope;
+	padding: 8px 0;
+	border-bottom: 1px solid #F4F6FA;
+}
+
+.price-table .content__element:last-of-type {
+	border: none;
+}
+
+.price-table .content__place {
+	font-size: 25px;
+	font-weight: 500;
+	line-height: 170%; /* 42.5px */
+	letter-spacing: 0.75px;
+}
+
+.price-table .content__place span {
+	font-size: 18px;
+	letter-spacing: 0.54px;
+}
+
+.price-table .content__price {
+	font-size: 30px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 170%; /* 51px */
+	letter-spacing: 0.9px;
+	text-transform: uppercase;
+}
+
+.price-table .btn {
+	position: relative;
+	padding: 15px 20px;
+	font-size: 20px;
+	width: 239px;
+	height: 60px;
+	justify-content: flex-start;
+	margin-top: 50px;
+}
+
+.price-table .btn:after {
+	content: '';
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='6' height='10' viewBox='0 0 6 10' fill='none'%3e%3cpath d='M6 5L0 0V10L6 5Z' fill='%23F4F6FA'/%3e%3c/svg%3e");
+	width: 6px;
+	height: 10px;
+	position: absolute;
+	top: 50%;
+	right: 20px;
+	transform: translateY(-50%);
+	margin-left: 39px;
+}
+
+/* ============= End (component:price-table) ============ */
+/* ============= (component:balls) ============ */
+.balls{
+	margin-bottom: 160px;
+}
+.balls__title{
+	color: #0C1931;
+	font-size: 94px;
+	font-weight: 500;
+	line-height: normal;
+	letter-spacing: -2.82px;
+	text-transform: uppercase;
+	margin-bottom: 54px;
+}
+.balls__list{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 16px;
+}
+.balls__item{
+	padding: 44px 0 58px 24px;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.balls__item:nth-child(1){
+	background-image: url('../../assets/img/season-ticket/balls-1.jpg');
+}
+.balls__item:nth-child(2){
+	background-image: url('../../assets/img/season-ticket/balls-2.jpg');
+}
+.balls__item:nth-child(3){
+	background-image: url('../../assets/img/season-ticket/balls-3.jpg');
+}
+.balls__item:nth-child(4){
+	background-image: url('../../assets/img/season-ticket/balls-4.jpg');
+}
+.balls__name {
+	color: #00205B;
+	font-family: Halvar Engschrift;
+	font-size: 36px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	letter-spacing: 1.08px;
+	text-transform: uppercase;
+	margin-bottom: 40px;
+}
+.balls__description {
+	max-width: 300px;
+	color: #00205B;
+	font-family: Manrope;
+	font-size: 22px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 170%; /* 37.4px */
+	letter-spacing: 0.66px;
+}
+
+/* ============= End (component:balls) ============ */
+
+
+@media screen and (max-width: 1600px) {
+	/* ================ price-table	*/
+	.price-table .tab {
+		padding: 16px 10px;
+		box-shadow: -0.7542856931686401px 3.0171427726745605px 12.068571090698242px 0px rgba(0, 0, 0, 0.10) inset;
+		height: 63px;
+		font-size: 27px;
+		letter-spacing: 0.81px;
+	}
+}
+
+@media screen and (max-width: 1280px) {
+	/* ================ intro	*/
+	.intro {
+		height: 625px;
+	}
+
+	.intro:after {
+		height: 417px;
+	}
+
+	.intro__content {
+		bottom: calc(-625px + 84px);
+	}
+
+	.intro__title {
+		font-size: 60px;
+		line-height: 100%; /* 60px */
+		letter-spacing: -0.6px;
+		margin-bottom: 30px;
+	}
+
+	/* ================ benefits	*/
+	.benefits {
+		padding: 70px 0 80px 0;
+	}
+
+	.benefits__title {
+		font-size: 70px;
+		letter-spacing: -2.1px;
+		margin-bottom: 25px;
+	}
+
+	.benefits__description {
+		width: 833px;
+	}
+
+	.benefits__description p {
+		font-size: 15px;
+		line-height: 170%; /* 34px */
+		letter-spacing: 0.45px;
+		margin-bottom: 45px;
+	}
+
+	.benefits__list {
+		gap: 32px 12px;
+	}
+
+	.benefits__icon {
+		min-width: 94px;
+		min-height: 94px;
+		max-width: 94px;
+		padding: 19px;
+	}
+
+	.benefits__text {
+		font-size: 15px;
+		padding: 10px 19px;
+	}
+
+	/* ================ price-table	*/
+	.price-table {
+		padding-bottom: 100px;
+	}
+
+	.price-table__title {
+		font-size: 70px;
+		letter-spacing: -2.1px;
+		margin-bottom: 42px;
+	}
+
+	.price-table .content__list {
+		padding: 38px 0 35px 74px;
+		max-width: 558px;
+	}
+
+	.price-table .content__head {
+		font-size: 22px;
+		letter-spacing: 0.66px;
+		padding-bottom: 17px;
+	}
+
+	.price-table .content__element {
+		padding: 7px 0;
+	}
+
+	.price-table .content__place {
+		font-size: 18px;
+		letter-spacing: 0.54px;
+	}
+
+	.price-table .content__place span {
+		font-size: 14px;
+		letter-spacing: 0.42px;
+	}
+
+	.price-table .content__price {
+		font-size: 22px;
+		letter-spacing: 0.66px;
+	}
+
+	.price-table .btn {
+		margin-top: 35px;
+	}
+}
+
+@media screen and (max-width: 990px) {
+	/* ================ intro	*/
+	.intro {
+		height: 543px;
+	}
+
+	.intro:after {
+		height: 411px;
+	}
+
+	.intro__content {
+		bottom: calc(-543px + 60px);
+	}
+
+	.intro__title {
+		font-size: 50px;
+		line-height: 100%; /* 60px */
+		letter-spacing: -0.5px;
+	}
+
+	/* ================ benefits	*/
+	.benefits__title {
+		font-size: 60px;
+		letter-spacing: -1.8px;
+		margin-bottom: 20px;
+	}
+
+	.benefits__description {
+		width: 100%;
+	}
+
+	.benefits__list {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 25px 10px;
+	}
+
+	.benefits__icon {
+		min-width: 94px;
+		min-height: 94px;
+		max-width: 94px;
+		padding: 19px;
+	}
+
+	.benefits__text {
+		font-size: 15px;
+		padding: 10px 15px;
+	}
+
+	/* ================ price-table	*/
+	.price-table {
+		padding-bottom: 80px;
+	}
+
+	.price-table__title {
+		font-size: 60px;
+		letter-spacing: -1.8px;
+		margin-bottom: 32px;
+	}
+
+	.price-table .tab {
+		padding: 16px 10px 14px 10px;
+		height: 92px;
+		font-size: 27px;
+		letter-spacing: 0.81px;
+		align-items: flex-start;
+		height: auto;
+	}
+
+	.price-table .tab-content {
+		background-position: unset;
+		background-size: initial;
+	}
+
+	.price-table .content__list {
+		padding: 40px 66px 35px 66px;
+		max-width: 100%;
+	}
+
+}
+
+@media screen and (max-width: 600px) {
+	/* ================ intro	*/
+	.intro {
+		height: 543px;
+	}
+
+	.intro__content {
+		bottom: calc(-543px + 52px);
+		width: 100%;
+	}
+
+	.intro__title {
+		font-size: 36px;
+		line-height: 105%; /* 60px */
+		letter-spacing: 0.36px;
+		margin-bottom: 45px;
+	}
+
+	.intro__title span br {
+		display: none;
+	}
+
+	.intro .btn {
+		padding: 12px 16px;
+		font-size: 17px;
+		width: 100%;
+		height: 50px;
+		justify-content: flex-start;
+	}
+
+	.intro .btn:after {
+		right: 16px;
+	}
+
+	/* ================ benefits	*/
+	.benefits {
+		padding: 40px 0 72px 0;
+	}
+
+	.benefits__title {
+		font-size: 40px;
+		letter-spacing: 0.4px;
+	}
+
+	.benefits__list {
+		grid-template-columns: repeat(1, 1fr);
+		gap: 20px;
+	}
+
+	.benefits__icon {
+		min-width: 94px;
+		min-height: 94px;
+		max-width: 94px;
+		padding: 19px;
+	}
+
+	.benefits__text {
+		font-size: 15px;
+		padding: 10px;
+	}
+
+	/* ================ price-table	*/
+	.price-table__title {
+		font-size: 40px;
+		letter-spacing: -1.4px;
+		margin-bottom: 30px;
+	}
+
+	.price-table .tab {
+		padding: 15px;
+		font-size: 18px;
+		letter-spacing: 0.54px;
+	}
+
+	.price-table .content__list {
+		padding: 17px 10px;
+	}
+
+	.price-table .content__head {
+		font-size: 18px;
+	}
+
+	.price-table .content__element {
+		padding: 5px 0;
+	}
+
+	.price-table .content__place {
+		font-size: 16px;
+		letter-spacing: 0.48px;
+	}
+
+	.price-table .content__place span {
+		font-size: 12px;
+		letter-spacing: 0.36px;
+	}
+
+	.price-table .content__price {
+		font-size: 16px;
+		letter-spacing: 0.48px;
+	}
+
+	.price-table .btn {
+		margin-top: 35px;
+		margin-bottom: 35px;
+		width: 100%;
+	}
+}
