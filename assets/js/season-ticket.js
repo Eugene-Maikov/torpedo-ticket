@@ -1,30 +1,54 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Активация первого таба при загрузке страницы
-  document.getElementById('tab1').classList.add('active');
-  document.getElementById('content1').classList.add('active');
 
-  // Получение всех вкладок и содержимого
-  var tabs = document.querySelectorAll('.tab');
-  var contentItems = document.querySelectorAll('.content-item');
+  const handleTabs = function (){
+    document.getElementById('tab1').classList.add('active');
+    document.getElementById('content1').classList.add('active');
 
-  // Перебор вкладок и добавление события клика
-  tabs.forEach(function(tab) {
-    tab.addEventListener('click', function() {
-      // Получение значения id выбранной вкладки
-      var tabId = this.id;
+    const tabs = document.querySelectorAll('.tab');
+    const contentItems = document.querySelectorAll('.content-item');
 
-      // Удаление класса "active" у всех вкладок и содержимого
-      tabs.forEach(function(item) {
-        item.classList.remove('active');
+    tabs.forEach(function(tab) {
+      tab.addEventListener('click', function() {
+
+        const tabId = this.id;
+
+        tabs.forEach(function(item) {
+          item.classList.remove('active');
+        });
+
+        contentItems.forEach(function(item) {
+          item.classList.remove('active');
+        });
+
+        this.classList.add('active');
+        document.getElementById('content' + tabId.slice(3)).classList.add('active');
       });
-
-      contentItems.forEach(function(item) {
-        item.classList.remove('active');
-      });
-
-      // Добавление класса "active" выбранной вкладке и соответствующему содержимому
-      this.classList.add('active');
-      document.getElementById('content' + tabId.slice(3)).classList.add('active');
     });
-  });
+  }
+  handleTabs()
+
+  const handleAccordion = function (){
+    const accordionItems = document.querySelectorAll('.accordion-item');
+
+    accordionItems.forEach(item => {
+      const header = item.querySelector('.accordion-header');
+      const content = item.querySelector('.accordion-content');
+
+      header.addEventListener('click', function() {
+        const isActive = item.classList.contains('active');
+
+        accordionItems.forEach(item => item.classList.remove('active'));
+        accordionItems.forEach(item => {
+          const content = item.querySelector('.accordion-content');
+          content.style.display = 'none';
+        });
+
+        if (!isActive) {
+          item.classList.add('active');
+          content.style.display = 'block';
+        }
+      });
+    });
+  }
+  handleAccordion()
 })

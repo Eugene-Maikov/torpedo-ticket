@@ -1,10 +1,7 @@
 /* ============= (component:intro) ============ */
 .intro {
   height: 842px;
-  background-image: url('../../assets/img/season-ticket/intro.jpg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: #00205B;
   position: relative;
 }
 
@@ -22,10 +19,24 @@
   position: relative;
 }
 
+.video-container {
+  width: 100%;
+  height: 100%;
+}
+
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .intro__content {
   position: absolute;
   left: 0;
-  bottom: calc(-842px + 150px);
+  bottom: 155px;
   z-index: 1;
 }
 
@@ -68,7 +79,6 @@
 /* ============= End (component:intro) ============ */
 /* ============= (component:benefits) ============ */
 .benefits {
-  background: #F4F6FA;
   padding: 117px 0 160px 0;
 }
 
@@ -138,7 +148,6 @@
 /* ============= (component:price-table) ============ */
 .price-table {
   padding-bottom: 147px;
-  background: #F4F6FA;
 }
 
 .price-table__title {
@@ -280,7 +289,6 @@
 /* ============= (component:balls) ============ */
 .balls {
   padding-bottom: 160px;
-  background: #F4F6FA;
 }
 
 .balls__title {
@@ -355,7 +363,6 @@
 /* ============= (component:demonstrator) ============ */
 .demonstrator {
   padding-bottom: 160px;
-  background: #F4F6FA;
 }
 
 .demonstrator__title {
@@ -422,6 +429,7 @@
   min-width: 454px;
   min-height: 820px;
   border-radius: 35px;
+  border: 4px solid #00205B;
   overflow: hidden;
 }
 
@@ -432,6 +440,106 @@
 }
 
 /* ============= End (component:demonstrator) ============ */
+/* ============= (component:faq) ============ */
+.faq {
+  padding-bottom: 192px;
+}
+
+.faq__title {
+  color: #0C1931;
+  font-family: Halvar Engschrift;
+  font-size: 94px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -2.82px;
+  text-transform: uppercase;
+  margin-bottom: 52px;
+}
+
+.faq .accordion {
+  width: 100%;
+}
+
+.faq .accordion-item {
+  margin-bottom: 14px;
+}
+
+.faq .accordion-header {
+  background: #EBEEF3;
+  padding: 24px 19px 24px 30px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq .accordion-header__title {
+  color: #00205B;
+  font-family: Halvar Engschrift;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 1.08px;
+  text-transform: uppercase;
+  display: block;
+  position: relative;
+}
+
+.faq .accordion-header__icon {
+  width: 51px;
+  height: 51px;
+  fill: #00205B;
+  margin-left: 15px;
+  flex: 0 0 auto;
+}
+
+.faq .accordion-item.active .accordion-header__icon {
+  transform: rotate(180deg);
+  fill: #C8102E;
+}
+
+.faq .accordion-item.active .accordion-header__title:after {
+  content: '';
+  width: 100%;
+  height: 3px;
+  background: #C8102E;
+  position: absolute;
+  left: 0;
+  bottom: -12px;
+}
+
+.faq .accordion-content {
+  background: #EBEEF3;
+  padding: 6px 30px 24px 30px;
+  display: none;
+}
+
+.faq .accordion-content__box {
+  max-width: 1076px;
+  min-width: 1076px;
+}
+
+.faq .accordion-content p {
+  color: #00205B;
+  font-family: Manrope;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 170%; /* 30.6px */
+  letter-spacing: 0.54px;
+}
+
+.faq .accordion-content p a {
+  color: #00205B;
+  font-family: Manrope;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 170%; /* 30.6px */
+  letter-spacing: 0.54px;
+  text-decoration: underline;
+}
+
+/* ============= End (component:faq) ============ */
 
 
 @media screen and (max-width: 1600px) {
@@ -482,6 +590,7 @@
     max-height: 688px;
     min-width: 382px;
     min-height: 688px;
+    border: 3px solid #00205B;
   }
 }
 
@@ -496,7 +605,7 @@
   }
 
   .intro__content {
-    bottom: calc(-625px + 84px);
+    bottom: 84px;
   }
 
   .intro__title {
@@ -635,6 +744,62 @@
   .demonstrator__image {
     border-radius: 30px;
   }
+
+  /* ================ faq	*/
+  .faq {
+    padding-bottom: 123px;
+  }
+
+  .faq__title {
+    font-size: 70px;
+    letter-spacing: -2.1px;
+    margin-bottom: 42px;
+  }
+
+  .faq .accordion-item {
+    margin-bottom: 15px;
+  }
+
+  .faq .accordion-header {
+    padding: 20px 23px 20px 23px;
+  }
+
+  .faq .accordion-header__title {
+    color: #00205B;
+    font-family: Halvar Engschrift;
+    font-size: 27px;
+    letter-spacing: 0.81px;
+  }
+
+  .faq .accordion-header__icon {
+    width: 39px;
+    height: 38px;
+  }
+
+  .faq .accordion-item.active .accordion-header__title:after {
+    height: 2px;
+    bottom: -7px;
+  }
+
+  .faq .accordion-content {
+    padding: 0 23px 20px 23px;
+  }
+
+  .faq .accordion-content__box {
+    max-width: 811px;
+    min-width: 811px;
+  }
+
+  .faq .accordion-content p {
+    font-size: 14px;
+    letter-spacing: 0.42px;
+  }
+
+  .faq .accordion-content p a {
+    font-size: 14px;
+    letter-spacing: 0.42px;
+    text-decoration: underline;
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -669,8 +834,9 @@
     max-height: 499px;
     min-width: 277px;
     min-height: 499px;
+    border: 2px solid #00205B;
     margin: 0 auto;
-    border-radius: 21px;
+    border-radius: 22px;
   }
 }
 
@@ -685,7 +851,7 @@
   }
 
   .intro__content {
-    bottom: calc(-543px + 60px);
+    bottom: 60px;
   }
 
   .intro__title {
@@ -768,7 +934,6 @@
     gap: 15px 10px;
   }
 
-
   .balls__item:nth-child(1) {
     background-image: url('../../assets/img/season-ticket/balls-1-mob.jpg');
   }
@@ -811,6 +976,36 @@
     letter-spacing: -1.8px;
     margin-bottom: 32px;
   }
+
+  /* ================ faq	*/
+  .faq {
+    padding-bottom: 105px;
+  }
+
+  .faq__title {
+    font-size: 60px;
+    letter-spacing: 1.8px;
+    margin-bottom: 32px;
+  }
+
+  .faq .accordion-header {
+    padding: 20px 20px 20px 23px;
+  }
+
+  .faq .accordion-content {
+    margin-top: -5px;
+  }
+
+  .faq .accordion-content__box {
+    max-width: 100%;
+    min-width: 100%;
+  }
+
+  .faq .accordion-content p a {
+    font-size: 14px;
+    letter-spacing: 0.42px;
+    text-decoration: underline;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -820,7 +1015,7 @@
   }
 
   .intro__content {
-    bottom: calc(-543px + 52px);
+    bottom: 52px;
     width: 100%;
   }
 
@@ -983,5 +1178,45 @@
     max-height: 462px;
     min-width: 257px;
     min-height: 462px;
+  }
+
+  /* ================ faq	*/
+  .faq {
+    padding-bottom: 94px;
+  }
+
+  .faq__title {
+    font-size: 40px;
+    letter-spacing: 0.4px;
+    margin-bottom: 30px;
+  }
+
+  .faq .accordion-header {
+    padding: 20px 10px 20px 10px;
+  }
+
+  .faq .accordion-header__title {
+    font-size: 18px;
+    letter-spacing: 0.54px;
+  }
+
+  .faq .accordion-header__icon {
+    width: 25px;
+    height: 24px;
+  }
+
+  .faq .accordion-item.active .accordion-header__title:after {
+    height: 2px;
+    bottom: -5px;
+  }
+
+  .faq .accordion-content {
+    margin-top: -7px;
+    padding: 0 10px 20px 10px;
+  }
+
+  .faq .accordion-content__box {
+    max-width: 100%;
+    min-width: 100%;
   }
 }
