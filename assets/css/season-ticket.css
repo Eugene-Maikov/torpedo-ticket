@@ -368,6 +368,10 @@
   margin-bottom: 57px;
 }
 
+.demonstrator__title span {
+  white-space: nowrap;
+}
+
 .demonstrator__inner {
   display: flex;
 }
@@ -403,13 +407,21 @@
   margin-right: 48px;
 }
 
+.demonstrator__description {
+  color: #00205B;
+  font-family: Manrope;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 170%; /* 34px */
+  letter-spacing: 0.6px;
+}
+
 .demonstrator__image {
   max-width: 454px;
   max-height: 820px;
   min-width: 454px;
   min-height: 820px;
   border-radius: 35px;
-  border: 4px solid #00205B;
   overflow: hidden;
 }
 
@@ -430,6 +442,46 @@
     height: 63px;
     font-size: 27px;
     letter-spacing: 0.81px;
+  }
+
+  /* ================ demonstrator	*/
+  .demonstrator__inner {
+    justify-content: space-between;
+  }
+
+  .demonstrator__list {
+    margin-right: 0;
+  }
+
+  .demonstrator__item {
+    max-width: 615px;
+    min-width: 615px;
+    max-height: 140px;
+    min-height: 140px;
+    padding: 0 57px;
+  }
+
+  .demonstrator__item:not(:last-child) {
+    margin-bottom: 41px;
+  }
+
+  .demonstrator__number {
+    font-size: 80px;
+    line-height: 82px; /* 101.894% */
+    letter-spacing: -0.8px;
+    margin-right: 48px;
+  }
+
+  .demonstrator__description {
+    font-size: 16px;
+    letter-spacing: 0.48px;
+  }
+
+  .demonstrator__image {
+    max-width: 382px;
+    max-height: 688px;
+    min-width: 382px;
+    min-height: 688px;
   }
 }
 
@@ -580,39 +632,45 @@
     margin-bottom: 42px;
   }
 
+  .demonstrator__image {
+    border-radius: 30px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  /* ================ demonstrator	*/
   .demonstrator__inner {
-    display: flex;
+    flex-direction: column;
   }
 
   .demonstrator__list {
-    margin-right: 116px;
+    margin-bottom: 35px;
   }
 
   .demonstrator__item {
-    max-width: 615px;
-    min-width: 615px;
+    max-width: 100%;
+    min-width: 100%;
     max-height: 140px;
     min-height: 140px;
-    padding: 0 57px;
   }
 
   .demonstrator__item:not(:last-child) {
-    margin-bottom: 41px;
+    margin-bottom: 25px;
   }
 
   .demonstrator__number {
-    font-size: 80px;
-    line-height: 81.515px; /* 101.894% */
+    line-height: 82px; /* 101.894% */
     letter-spacing: -0.8px;
-    margin-right: 40px;
+    margin-right: 33px;
   }
 
   .demonstrator__image {
-    max-width: 382px;
-    max-height: 688px;
-    min-width: 382px;
-    min-height: 688px;
-    border: 3px solid #00205B;
+    max-width: 277px;
+    max-height: 499px;
+    min-width: 277px;
+    min-height: 499px;
+    margin: 0 auto;
+    border-radius: 21px;
   }
 }
 
@@ -745,47 +803,13 @@
 
   /* ================ demonstrator	*/
   .demonstrator {
-    padding-bottom: 104px;
+    padding-bottom: 80px;
   }
 
   .demonstrator__title {
-    font-size: 70px;
-    margin-bottom: 42px;
-  }
-
-  .demonstrator__inner {
-    display: flex;
-  }
-
-  .demonstrator__list {
-    margin-right: 116px;
-  }
-
-  .demonstrator__item {
-    max-width: 615px;
-    min-width: 615px;
-    max-height: 140px;
-    min-height: 140px;
-    padding: 0 57px;
-  }
-
-  .demonstrator__item:not(:last-child) {
-    margin-bottom: 41px;
-  }
-
-  .demonstrator__number {
-    font-size: 80px;
-    line-height: 81.515px; /* 101.894% */
-    letter-spacing: -0.8px;
-    margin-right: 40px;
-  }
-
-  .demonstrator__image {
-    max-width: 382px;
-    max-height: 688px;
-    min-width: 382px;
-    min-height: 688px;
-    border: 3px solid #00205B;
+    font-size: 50px;
+    letter-spacing: -1.8px;
+    margin-bottom: 32px;
   }
 }
 
@@ -904,7 +928,7 @@
   .balls__title {
     font-size: 40px;
     letter-spacing: -1.8px;
-    margin-bottom: 32px;
+    margin-bottom: 30px;
   }
 
   .balls__list {
@@ -926,5 +950,38 @@
   .balls__description {
     max-width: 100%;
     font-size: 14px;
+  }
+
+  /* ================ demonstrator	*/
+  .demonstrator {
+    padding-bottom: 70px;
+  }
+
+  .demonstrator__title {
+    font-size: 40px;
+    letter-spacing: -1.8px;
+    margin-bottom: 30px;
+  }
+
+  .demonstrator__item {
+    max-height: fit-content;
+    min-height: fit-content;
+    padding: 15px;
+  }
+
+  .demonstrator__number {
+    margin-right: 22px;
+  }
+
+  .demonstrator__description {
+    font-size: 14px;
+    letter-spacing: 0.42px;
+  }
+
+  .demonstrator__image {
+    max-width: 257px;
+    max-height: 462px;
+    min-width: 257px;
+    min-height: 462px;
   }
 }
